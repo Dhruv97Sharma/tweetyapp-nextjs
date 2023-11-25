@@ -1,0 +1,32 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  width="512"
+  height="512"
+>
+  <!-- Background -->
+  <rect width="512" height="512" fill="#000" />
+
+  <!-- Neon Bird body -->
+  <path
+    d="M240.225 461.32 L36.955 375.67 L111.045 261.54 L24.175 84.28 L215.615 189.34 L303.835 173.72 L343.055 190.77 L310.415 50.68 L441.085 227.81 L487.825 339.99 L358.275 461.32 L240.225 461.32 Z M246.695 429.32 L84.615 361.03 L147.765 263.75 L97.395 160.96 L210.095 222.82 L299.915 206.91 L388.665 245.5 L376.795 194.57 L413.035 243.69 L449.745 331.81 L345.625 429.32 L246.695 429.32 Z M194.358 317.397 C 194.358 307.187 202.647 298.897 212.858 298.897 C 223.068 298.897 231.358 307.187 231.358 317.397 C 231.358 327.608 223.068 335.897 212.858 335.897 C 202.647 335.897 194.358 327.608 194.358 317.397 Z M365.858 317.397 C 365.858 307.187 374.147 298.897 384.358 298.897 C 394.568 298.897 402.858 307.187 402.858 317.397 C 402.858 327.608 394.568 335.897 384.358 335.897 C 374.147 335.897 365.858 327.608 365.858 317.397 Z M301.876 379.97"
+    fill="none"
+    stroke="#0ff"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#neon)"
+  />
+
+  <!-- Neon effect -->
+  <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+    <feComponentTransfer in="SourceGraphic" result="glow">
+      <feFuncA type="table" tableValues="0 0.1 0.2 0.5 0.8 1 0.8 0.5 0.2 0.1 0" />
+    </feComponentTransfer>
+    <feGaussianBlur in="glow" stdDeviation="3" result="blurred" />
+    <feMerge>
+      <feMergeNode in="blurred" />
+      <feMergeNode in="glow" />
+    </feMerge>
+  </filter>
+</svg>

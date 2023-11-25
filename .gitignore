@@ -1,0 +1,3 @@
+docker-compose.yml
+Dockerfile
+./tweety-app/node_modules/
